@@ -1,20 +1,29 @@
-import { Button, Image, Modal, SafeAreaView, StyleSheet, Text, View } from "react-native";
-
+import { Alert, Button, Image, Modal, SafeAreaView, StyleSheet, Text, View } from "react-native";
 
 export default function Header() {
+    
+    const workouts = () => Alert.alert("Workouts")
+    const addedWorkouts = () => Alert.alert("Added workouts")
+    const summary = () => Alert.alert("Summary")
+
     return(
         <SafeAreaView style={styles.Header}>
-            <Text style={styles.HeadText}>Workout's</Text>
+            <Text style={styles.HeadText}>
+                Workout's
+            </Text>
             <View style={styles.Buttons}>
-                <Button 
+                <Button
+                onPress={workouts}
                 title={"Workout's"}
                 color='black'
                 />
                 <Button
+                onPress={addedWorkouts}
                 title={"Added workout's"}
                 color='black'
                 />
                 <Button
+                onPress={summary}
                 title={"Summary"}
                 color='black'
                 />
@@ -38,16 +47,17 @@ export default function Header() {
 const styles = StyleSheet.create({
     Header: {
         backgroundColor: '#d6d0c1',
-        height: 150
+        height: 150,
+        alignItems: 'center'
     },
     HeadText: {
-        flex: 1,
-        fontWeight: 'bold',
-        justifyContent: 'center'
+        textAlign: 'center',
+        paddingTop: '40',
+        fontSize: 30
     },
     Buttons: {
-        flex: 1,
         flexDirection: 'row',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        paddingTop: 15
     }
 })
