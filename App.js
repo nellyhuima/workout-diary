@@ -1,11 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, Text, View } from 'react-native';
-import Header from './components/Header-workouts-page';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import Header from './components/Header';
+import Workouts from './components/Workouts';
 
 export default function App() {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <Header/>
+      <Workouts/>
     </SafeAreaView>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: ''
+  }
+})
