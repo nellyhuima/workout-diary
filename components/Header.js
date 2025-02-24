@@ -1,5 +1,4 @@
-import { Alert, Button, Image, Modal, SafeAreaView, StyleSheet, Text, View } from "react-native";
-import { MD3LightTheme, Provider } from "react-native-paper";
+import { Alert, Button, SafeAreaView, StyleSheet, Text, View } from "react-native";
 
 export default function Header() {
     

@@ -4,7 +4,7 @@ import InputSpinner from "react-native-input-spinner";
 import { Button, PaperProvider, Text } from "react-native-paper";
 import { Dropdown } from "react-native-paper-dropdown";
 
-export default function Add_new() {
+export default function Add_new_components() {
 
 const SPORTS = [
         { label: 'Select', value: 'Select'},
@@ -15,6 +15,7 @@ const SPORTS = [
 
     const [sport, setSport] = useState(SPORTS[0].value);
     const [time, setTime] = useState(0);
+    const [km, setKm] = useState(0);
     
     return (
         <PaperProvider>
@@ -38,8 +39,8 @@ const SPORTS = [
                 <Text>Distance (Km)</Text>
                     <InputSpinner
                     placeholder='0'
-                    onChange={setTime}
-                    value={time}
+                    onChange={setKm}
+                    value={km}
                     />
                 </View>
                 <View>

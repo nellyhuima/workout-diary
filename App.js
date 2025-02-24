@@ -1,14 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import Header from './components/Header';
-import Workouts from './components/Workouts';
+import Content from './components/Content';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <Header/>
-      <Workouts/>
-    </SafeAreaView>
+  return ( 
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        <Header/>
+        <Content/>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 
